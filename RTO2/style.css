@@ -1,0 +1,161 @@
+html {
+    height: 100%;
+}
+main {
+    flex-grow: 1; /* This is the key: it makes the main content take up all available vertical space */
+}
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the body covers the full height of the screen */
+    margin: 0; /* Remove default body margin */
+}
+
+/* This custom style ensures the white text on the hero is readable */
+.hero{
+/* Add a darkened overlay for better text contrast */
+background: 
+       linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Dark Overlay */
+       url('images/banner.jpg') no-repeat center center; /* Background Image */
+       padding-top: 8rem; /* Use custom padding for height */
+       padding-bottom: 8rem;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+        }
+        .hero p {
+            font-size: 1.5rem;
+        }
+        .btn-custom {
+            transition: all 0.3s ease;
+        }
+        .btn-custom:hover {
+            transform: translateY(-2px);
+        }
+        .section-padding {
+            padding: 5rem 0;
+        }
+        .card {
+            border: none;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        .bg-primary-gradient {
+            background: linear-gradient(45deg, #007bff, #00d4ff);
+        }
+
+/*Navbar Style*/
+
+.bg-custom-nav {
+    background-color: #1a2a44; /* Dark blue background */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.navbar-brand img {
+    transition: transform 0.3s ease;
+}
+
+    .navbar-brand img:hover {
+        transform: scale(1.05); /* Slight zoom on hover */
+    }
+
+.nav-link {
+    color: #ffffff !important; /* White text for links */
+    font-weight: 500;
+    margin-left: 1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+    .nav-link:hover {
+        color: #00d4ff !important; /* Light blue on hover/active */
+        transform: scale(1.15); /* Slight zoom on hover */
+    }
+
+    .nav-link.active {
+        transform: scale(1.15);
+        color: #00d4ff !important; /* Light blue on hover/active */
+    }
+
+.navbar-toggler {
+    border: none;
+}
+
+    .navbar-toggler:focus {
+        box-shadow: none; /* Remove default focus outline */
+    }
+/*Navbar Style*/
+
+.map-container {
+    position: relative;
+    width: 90%;
+    padding-top: 56.25%; /* 16:9 aspect ratio (adjust to 100% for 1:1 square) */
+    height: 0;
+    overflow: hidden;
+}
+
+    .map-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+
+
+.carousel-caption {
+    /* Adjust caption position slightly for better centering */
+    bottom: 15%;
+}
+
+/* Target the previous button */
+.carousel-control-prev {
+    /* Pushes the control further to the left edge of its container. 
+       Adjust -3rem or -5rem for a larger push. */
+    left: -10rem;
+    color: black;
+}
+
+/* Target the next button */
+.carousel-control-next {
+    /* Pushes the control further to the right edge of its container. 
+       Adjust -3rem or -5rem for a larger push. */
+    right: -10rem;
+}
+
+/* Change the previous arrow to black */
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+}
+
+/* Change the next arrow to black */
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M4.646 1.646a.5.5 0 0 0 0 .708L10.293 8l-5.647 5.646a.5.5 0 0 0 .708.708l6-6a.5.5 0 0 0 0-.708l-6-6a.5.5 0 0 0-.708 0z'/%3e%3c/svg%3e");
+}
+
+.testimonials {
+    /* 1. Specify the image file */
+    background-image: url('images/.jpg');
+    /* 2. Ensure it covers the whole area */
+    background-size: cover;
+    /* 3. Center the image */
+    background-position: center;
+    /* 4. Prevent the image from tiling */
+    background-repeat: no-repeat;
+    /* 5. Optional: Make the background fixed (nice scrolling effect) */
+    background-attachment: fixed;
+}
+
+.form-error {
+    color: red;
+    font-size: 0.9em;
+}
